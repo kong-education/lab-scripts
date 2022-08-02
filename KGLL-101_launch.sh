@@ -20,7 +20,7 @@ ln -s $(realpath kong-pongo/pongo.sh) ~/.local/bin/pongo
 cd /srv/shared
 export HOME
 git init
-
+git config --global --add safe.directory /srv/shared
 git remote add -f origin https://github.com/kong-education/kong-custom-plugin.git
 git config core.sparseCheckout true
 echo 'kong-plugin'  >> .git/info/sparse-checkout
@@ -28,4 +28,4 @@ git pull origin master
 git config --global --add safe.directory /srv/shared
 # run Pongo
 cd /srv/shared/kong-plugin
-pongo run 
+pongo run
