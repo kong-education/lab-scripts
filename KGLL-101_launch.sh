@@ -18,12 +18,14 @@ ln -s $(realpath kong-pongo/pongo.sh) ~/.local/bin/pongo
 
 # clone the kong-plugin folder in the shared volume. Here We want the sub-directory kong-plugin
 cd /srv/shared
-git init 
+export HOME
+git init
+
 git remote add -f origin https://github.com/kong-education/kong-custom-plugin.git
 git config core.sparseCheckout true
 echo 'kong-plugin'  >> .git/info/sparse-checkout
 git pull origin master
-
+git config --global --add safe.directory /srv/shared
 # run Pongo
 cd /srv/shared/kong-plugin
 pongo run 
