@@ -5,8 +5,8 @@
 mkdir -p ~/.local/bin
 # export variables
 export PONGO_WD=/srv/shared/kong-plugin
-export KONG_VERSION=2.6.0.0
-export KONG_IMAGE=kong/kong-gateway:2.6.0.0-alpine
+export KONG_VERSION=3.0.0.0
+export KONG_IMAGE=kong/kong-gateway:3.0.0.0-alpine
 # export KONG_VERSION=2.6.0.0
 # export KONG_IMAGE=kong/kong-gateway:2.6.0.0-alpine
 export POSTGRES=9.6
