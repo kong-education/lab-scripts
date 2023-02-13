@@ -7,6 +7,8 @@ mkdir -p ~/.local/bin
 export PONGO_WD=/srv/shared/kong-plugin
 export KONG_VERSION=2.6.0.0
 export KONG_IMAGE=kong/kong-gateway:2.6.0.0-alpine
+# export KONG_VERSION=2.6.0.0
+# export KONG_IMAGE=kong/kong-gateway:2.6.0.0-alpine
 export POSTGRES=9.6
 export PATH=~/.local/bin/:$PATH
 export KONG_LICENSE_DATA=$(cat /etc/kong/license.json | tr -d '[:space:]')
@@ -27,5 +29,5 @@ echo 'kong-plugin'  >> .git/info/sparse-checkout
 git pull origin master
 git config --global --add safe.directory /srv/shared
 # run Pongo
-cd /srv/shared/kong-plugin
-pongo run
+# cd /srv/shared/kong-plugin
+# pongo run
