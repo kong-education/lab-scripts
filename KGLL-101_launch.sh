@@ -25,5 +25,5 @@ echo 'kong-plugin'  >> .git/info/sparse-checkout
 git pull origin master
 
 # run Pongo
-cd /srv/shared/kong-plugin
-pongo run 
+# cd /srv/shared/kong-plugin
+# pongo run 
